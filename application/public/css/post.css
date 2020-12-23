@@ -1,0 +1,128 @@
+
+.content
+{
+    margin: auto;
+    background: rgba(230,230,250,0.25);
+    width: 100%; 
+    padding: 1rem;
+}
+
+
+header
+{
+    font-size: 20px;
+}
+
+#container
+{
+    margin: 1rem;
+}
+
+.imageContent
+{
+    width: 100%; 
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    margin-top: 5rem;
+}
+
+#image-post-image
+{
+    max-width: 450px;
+}
+
+.imagePostContent 
+{
+    display: flex; 
+    width: 100%; 
+}
+
+
+#messages
+{
+    height: 30rem;
+    grid-area: messages;
+    overflow-y: auto;
+    display: flex;
+    flex-flow: column-reverse nowrap;
+}
+
+#comment-container
+{
+    background-color: #d3eff2;
+    justify-self: stretch;
+    grid-area: comments;
+    grid-template-columns: 10fr;
+    gap: .2rem;
+    grid-template-areas:
+    "messages"
+    "comment-box";
+    max-height: 90vh;
+}
+
+div[id^=message-]
+{
+    display: grid;
+    grid-template-rows: .3fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: .2em;
+    padding: .25rem;
+    margin: .2rem;
+    font-size: 1rem;
+    border: solid 2px;
+    border-color: solid;
+    font-size:20px;
+    grid-template-areas:
+    "author created"
+    "comment comment";
+}
+
+#comment-box
+{
+    bottom: 2rem;
+}
+
+.author-text
+{
+    justify-self: left;
+    grid-area: author;
+}
+
+.comment-text
+{
+    grid-area: comment;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 75px;
+    min-height: 75px;
+}
+
+.date-posted
+{
+    justify-self:right;
+    grid-area: created;
+}
+
+#commentBoxBox
+{
+    margin-top: 0;
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+.form-button
+{
+    width: 15rem;
+    padding: 10px 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: none;
+    background-color: rgba(230,230,250,0.25);
+    outline-color: #A9A9A9;
+    outline-width: 1px;
+    outline-style: double;
+    color: black;
+    font-family: Didot, monospace;
+}

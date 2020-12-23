@@ -1,0 +1,21 @@
+    <header>
+<img src = "/public/images/Truman1.png" alt = "Logo" width="175rem" id="logo"/>
+        <h1>Photo App</h1>
+
+    </header>
+<nav id="nav-bar">
+    <a href="/" id="home-button" class="nav-button"> Home </a>
+    <span id = "search">
+        <input type="text" id="search-text" placeholder="Search" name="search-text" class="search-text">
+        <b href id="search-button" class="nav-button"> Search </a>
+    </span>
+
+    {{#if logged}}
+    <a href="/postimage" id="post-button" class="nav-button"> Post </a>
+    <a href id="logout-button" class="nav-button"> Log Out </a>
+
+    {{else}}
+    <a href="/registration" id="registration-button" class="nav-button"> Register </a>
+    <a href="/login" id="login-button" class="nav-button"> Log In </a>
+    {{/if}}
+</nav> 

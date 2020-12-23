@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="public/css/form.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>postimage</title>
+</head>
+<body>
+    <header>
+        <h1>Post Image</h1>
+
+    </header>
+    
+        <form method="POST" enctype="multipart/form-data" action='/posts/createPost'>
+            <p>
+            <label for="Post Title">Post Title</label>
+            <input type="text" name="title" required/>
+            </p>     
+            <p>
+            <label for="Description">Description</label>
+            <input type="textarea" name="description" required/>
+            </p>    
+            <p>
+            <label for="Image">Image</label>
+            <input type="file" name="uploadImage" accept="image/*" required/>
+            </p> 
+            <p>
+            <input type="checkbox" name="accept" value="accept" required>
+            <label for="accept"> I agree to the Acceptable Use Policy for uploading images </label></p>
+            </p> 
+
+            <input type="submit"/>
+    </form>
+</body>
+</html>

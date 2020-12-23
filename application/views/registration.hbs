@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="public/css/form.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" defer src="../js/registration.js"></script>
+    <title>Registration</title>
+</head>
+<body>
+    <header>
+        <h1>Registration</h1>
+
+    </header>
+    
+        <form method="POST" id="registrationForm" action="/users/register" enctype="application/x-www-form-urlencoded" >
+
+            <div class = "userInput">
+            <p>
+            <label for="Username">Username</label>
+            <input type="text" id="inputUsername" name="username" placeholder="Username" required/> 
+            <span class="details" id="usernameDetails"> </span>
+            </p>     
+            <p>
+            <label for="Email Address">Email Address</label>
+            <input type="email" id="inputEmail" name="email" placeholder="Email Adress" required/>
+            <span class="details" id="emailDetails"> </span>
+            </p>    
+            <p>
+            <label for="Password">Password</label>
+            <input type="password" id="inputPassword" name="password" placeholder="Password" required/>
+            <span class="details" id="passwordDetails"> </span>
+            </p> 
+            <p>
+            <label for="Confirm Password">Confirm Password</label>
+            <input type="password" id="inputPasswordConfirm" name="cpassword" placeholder="Retype Password" required/>
+            <span class="details" id="confirmPasswordDetails"> </span>
+            </p> 
+        </div>
+        <div class = "checkbox">
+            <p>
+            <input type="checkbox" id="checkBoxId" required name="accept" value="accept" required>
+            <label for="accept"> I agree that I am 13+ year of age </label>
+            </p>
+            <p>
+                <input type="checkbox" id="checkBoxId2" required name="accept" value="accept" required>
+                <label for="accept"> I agree to the TOS and Privacy rules </label>
+            </p>
+            <a href="#"> TOS and Privacy Rules </a>
+            <br >
+        </div>
+            
+            <input type="submit" name="submit" value="submit" onclick="if(document.getElementById('checkBoxId').checked && document.getElementById('checkBoxId2').checked ) { redirect();} else { alert('Invalid Try Again'); return false; }"/>
+        </form>
+</body>
+</html>
